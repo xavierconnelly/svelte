@@ -4,9 +4,11 @@
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
+		border-top: 1px solid black;
 		font-weight: 300;
 		padding: 0 1em;
+		position: fixed;
+		bottom: 0;
 	}
 
 	ul {
@@ -23,7 +25,7 @@
 
 	li {
 		display: block;
-		float: left;
+		float: right;
 	}
 
 	[aria-current] {
@@ -50,7 +52,7 @@
 
 <nav>
 	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
+		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">Basil Papoutsidis</a></li>
 		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
