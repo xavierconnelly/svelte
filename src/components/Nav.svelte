@@ -6,14 +6,16 @@
 	nav {
 		border-top: 1px solid black;
 		font-weight: 300;
-		padding: 0 1em;
+		padding: 0 0.5em;
 		position: fixed;
 		bottom: 0;
+		background-color: white;
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
+		float: right;
 	}
 
 	/* clearfix */
@@ -25,7 +27,7 @@
 
 	li {
 		display: block;
-		float: right;
+		float: left;
 	}
 
 	[aria-current] {
