@@ -1,63 +1,50 @@
 <script>
-	import Clock from './Clock.svelte';
-	import Volume from './Volume.svelte'
-	import {stations} from './Stations.js';
-
-	let y;
+	import successkid from 'images/successkid.jpg';
 </script>
 
-<svelte:window bind:scrollY={y}/>
-<div id="filler"></div>
-
-<div id="earth">
-	<div class="clock"
-			 style="transform: rotate({y}deg)">
-		{#each $stations as station, i}
-			<Clock 
-					i={i}		
-					hex={station.hex}
-					name={station.name}
-					utc={station.utc}
-					class={station.class}
-					src={station.audio}/>
-		{/each}
-	</div>
-</div>
-
-<Volume />
-
 <style>
-	:global(body) {
-			margin: 0;
-			padding: 0;
-			background: #F4F2EA;
-			color: #1F3470;
+	h1, figure, p {
+		text-align: center;
+		margin: 0 auto;
 	}
-	
-	#filler{
-		height: 1000vh;
-	}
-	
-	#earth{
-		width: 500px;
-		height: 500px;
-    position: fixed;
-    left: 50vw;
-    top: 50vh;
-    border-radius: 50%;
-    z-index: 2;
-    transform: translate(-50%, -50%);
-}
-	
-.clock {
-		background: #F2F0EA;
-		height: 550px; 
-		width: 550px;  /*border: px solid pink;*/
-		border-radius: 50%; 
-		position: absolute;
-	 /* top: ;
-		/*transform: translate(-50%, -50%);*/
-}
-	
 
+	h1 {
+		font-size: 2.8em;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin: 0 0 0.5em 0;
+	}
+
+	figure {
+		margin: 0 0 1em 0;
+	}
+
+	img {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 0 1em 0;
+	}
+
+	p {
+		margin: 1em auto;
+	}
+
+	@media (min-width: 480px) {
+		h1 {
+			font-size: 4em;
+		}
+	}
 </style>
+
+<svelte:head>
+	<title>Sapper project template</title>
+</svelte:head>
+
+<h1>Basil Papoutsidis</h1>
+
+<figure>
+	<img alt="Success Kid" src="{successkid}">
+	<figcaption>Have fun with Sapper!</figcaption>
+</figure>
+
+<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
